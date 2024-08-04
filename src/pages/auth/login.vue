@@ -17,8 +17,8 @@ const loginAdmin = async () => {
   api
     .post(`/admin/signin`, admin.value)
     .then((res) => {
-      router.push("/dashboard");
       localStorage.setItem("adminData", JSON.stringify(res.data.admin));
+      router.push("/dashboard");
     })
     .catch((err) => {
       errors.value = "Login or password is incorrect"
