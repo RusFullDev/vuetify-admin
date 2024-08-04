@@ -5,7 +5,6 @@ const props = defineProps({
   data: Object,
 });
 
-console.log(props?.data);
 </script>
 <template>
   <v-row align="center" justify="center" dense>
@@ -17,7 +16,7 @@ console.log(props?.data);
         title="Users"
       >
         <div class="d-flex">
-          <v-card-text>Number of users:</v-card-text>
+          <v-card-text>Number of users</v-card-text>
           <v-card-text
             >{{
               props?.data?.datasets?.[0]?.data.reduce((a, b) => a + b, 0) || 0
@@ -30,7 +29,7 @@ console.log(props?.data);
       <v-card
         class="mx-auto"
         color="#C0C0C0"
-        prepend-icon="mdi-account"
+        prepend-icon="mdi-account-tie-hat"
         title="Drivers"
       >
         <div class="d-flex">
